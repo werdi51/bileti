@@ -1,0 +1,15 @@
+const btn = document.querySelector('.coin-btn')
+const coin = document.querySelector('.coin')
+
+let i = 1;
+let deg = 0;
+
+btn.addEventListener('click', () => {
+    deg += 3600;
+    i++;
+    coin.style.transform = `rotate3d(1, 1, 1, ${deg}deg)`;
+    console.log(coin.children[Math.round(Math.random())]);
+    setTimeout(() => {
+       coin.children[Math.round(Math.random())].style.zIndex = i; 
+    }, 500);
+})
